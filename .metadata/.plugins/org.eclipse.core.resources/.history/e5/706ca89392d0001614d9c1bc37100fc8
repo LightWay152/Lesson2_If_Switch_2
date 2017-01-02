@@ -1,0 +1,45 @@
+package com.example.superlativeequation;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	private EditText edtInputCoefficientA, edtInputCoefficientB;
+	private Button btnCalculate;
+	private TextView txtResult;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		//Mapped
+		onMapped();
+		
+		//Catch even when click button
+		onClickButton();
+	}
+
+	private void onClickButton() {
+		btnCalculate.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Float coefficient_a = Float.valueOf(edtInputCoefficientA.getText().toString());
+				Float coefficient_b = Float.valueOf(edtInputCoefficientB.getText().toString());
+				Float result = 0f;
+			}
+		});		
+	}
+
+	private void onMapped() {
+		edtInputCoefficientA = (EditText) findViewById(R.id.edtInputCoefficientA);	
+		edtInputCoefficientB = (EditText) findViewById(R.id.edtInputCoefficientB);
+		btnCalculate = (Button) findViewById(R.id.btnCalculate);
+		txtResult = (TextView) findViewById(R.id.txtResult);
+	}
+}

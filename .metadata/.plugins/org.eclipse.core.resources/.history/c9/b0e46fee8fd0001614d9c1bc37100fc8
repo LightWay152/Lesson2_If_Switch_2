@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Superlative Equation</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="input_coefficient_a">Input coefficient a here</string>
+    <string name="input_coefficient_b">Input coefficient b here</string>
+
+</resources>
